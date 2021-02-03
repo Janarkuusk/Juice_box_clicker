@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Juice Box Clicker</title>
+    <script>
+
+        var clicker = {
+            juice:0
+        };
+        function juice_clicked(){
+            clicker[juice]++;
+        }
+
+        function updatecount(){
+            setInterval(() => {
+                document.querySelector("#juice").innerHTML = "you have "+clicker.juice+" juice"
+            },50);
+        }
+        
+    </script>
+</head>
+<body onload="updatecount()">
+    <h1 class="font" id="juice">you have 0 juice</h1>
+    <a href=# onClick="juice_clicked('juice')"><img src="clicker_box.png"></a>
+</body>
+</html>

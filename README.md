@@ -33,7 +33,7 @@
 
 5- 10000 Juice Machine
 
-6- 50000 Slaves
+6- 50000 Old Ranch Juice House
 
 7- 100000 Big Juicer
 

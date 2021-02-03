@@ -7,24 +7,44 @@
 
     <title>Juice Box Clicker</title>
     <script>
-
         var clicker = {
-            juice:0
-        };
-        function juice_clicked(){
-            clicker[juice]++;
-        }
+            juice:0,
+            upgrades: {
+                juice_machine:{
+                    amount:0,
+                    cost:10,
+                    jps:1,
+                    name:"Juice machine"
+                }
 
+            }
+        };
+        function juice_clicked(juice){
+            clicker.upgrades[juice].amount++
+            update_upgrades();
+        }
+        function update_upgrades(){
+            document.querySelector("#upgrades").innerHTML="";
+            for(i in clicker.upgrades){
+                document.querySelector("#upgrades").innerHTML+= `<br> <button> onclick="juice_clicked('${i}'">${clicker.upgrades
+                [i].name}</button> you have ${clicker.upgrades[i].amount}`;
+            }
+        }
         function updatecount(){
-            setInterval(() => {
-                document.querySelector("#juice").innerHTML = "you have "+clicker.juice+" juice"
-            },50);
+           update_upgrades();
+           setInterval(() => {
+               for(i in clicker.upgrades){
+                   clicker.juice+=clicker.upgrades[i].amount*clicker.upgrades[i].jps/20
+               }
+               document.querySelector("#juice").innerHTML = "you have "+String(clicker.juice).split(".")[0]+" juice"
+           },50);
         }
         
     </script>
 </head>
 <body onload="updatecount()">
-    <h1 class="font" id="juice">you have 0 juice</h1>
-    <a href=# onClick="juice_clicked('juice')"><img src="clicker_box.png"></a>
+    <h1 id="juice">you have 0 juice</h1>
+    <button onclick="clicker.juice++">Get 1 juice</button>
+    <div id="upgrades"></div>
 </body>
 </html>

@@ -42,3 +42,8 @@
 9- 500000 Juice Cow
 
 10- 1000000 XQCL
+
+# Links
+
+**Figma**
+

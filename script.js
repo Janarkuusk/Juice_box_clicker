@@ -2,7 +2,7 @@ $(function() {
   
   var juice = 0;
   var minersOwned = 0;
-  var minersUpgrade = 1;
+  var minersUpgrade = 2;
   var ticks;
 
   if (localStorage.getItem('juice') !== null) {
@@ -45,7 +45,8 @@ $(function() {
             $("#btn-upgrade").removeAttr("disabled", "disabled");
         }    
      }
-  
+
+     
   function mathJuice(operator, amount) {
     switch (operator) {
       case "add":

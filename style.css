@@ -1,15 +1,22 @@
 #top-bar, #top-bar div h3{
   background-color: #D9AEFB;
   color: white;
+  
 }
 #main{
   background-color: greenyellow
+  
+
 }
 .clearFloats{
-  clear: both;  
+  clear: both;
+  
 }
 
 .center-block{
+  display: flex;
+ 
   background-color: greenyellow;
   border: greenyellow;
 }
+

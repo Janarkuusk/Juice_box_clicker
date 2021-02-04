@@ -1,5 +1,5 @@
 # Juice box clicker
-**Achievement**
+**Achievement - Removed**
 
 1- 42 Meaning of Juice
 

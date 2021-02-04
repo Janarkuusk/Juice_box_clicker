@@ -8,3 +8,8 @@
 .clearFloats{
   clear: both;  
 }
+
+.center-block{
+  background-color: greenyellow;
+  border: greenyellow;
+}

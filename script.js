@@ -2,7 +2,7 @@ $(function() {
   
   var juice = 0;
   var minersOwned = 0;
-  var minersUpgrade =1;
+  var minersUpgrade = 1;
   var ticks;
 
   if (localStorage.getItem('juice') !== null) {
@@ -29,7 +29,7 @@ $(function() {
     console.log(juice)
     $("#juice-display").text(juice.toFixed(0));
     $("#owned-display").text(minersOwned);
-    $("#rate-display").text(minersUpgrade.toFixed(0));
+    $("#rate-display").text(minersUpgrade.toFixed(1));
   }
   
   function checkButtonsEnabled(){
@@ -72,22 +72,22 @@ $(function() {
       localStorage.juice = 0;
       minersOwned = 0;
       localStorage.minersOwned = 0;  
-      minersUpgrade =1;
-      localStorage.minersUpgrade =1;
+      minersUpgrade = 1;
+      localStorage.minersUpgrade = 1;
       updateDisplay();
   });  
   $("#btn-buy").click(function() {
-    if (juice >= 1) {
-      mathJuice("sub", 1)
+    if (juice >= 30) {
+      mathJuice("sub", 30)
       minersOwned += 1;
       localStorage.minersOwned = minersOwned;
       updateDisplay();
     }
   });
   $("#btn-upgrade").click(function() {
-    if (juice >= 1) {
-      mathJuice("sub", 1)
-      minersUpgrade += 1;
+    if (juice >= 30) {
+      mathJuice("sub", 30)
+      minersUpgrade += 0.2;
       localStorage.minersUpgrade = minersUpgrade;
       updateDisplay();
     }

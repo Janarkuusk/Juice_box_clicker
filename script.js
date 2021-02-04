@@ -27,9 +27,9 @@ $(function() {
   function updateDisplay() {
     checkButtonsEnabled();
     console.log(juice)
-    $("#juice-display").text(juice.toFixed(5));
+    $("#juice-display").text(juice.toFixed(0));
     $("#owned-display").text(minersOwned);
-    $("#rate-display").text(minersUpgrade.toFixed(5));
+    $("#rate-display").text(minersUpgrade.toFixed(0));
   }
   
   function checkButtonsEnabled(){
@@ -92,8 +92,6 @@ $(function() {
       updateDisplay();
     }
   });
-
-  
   
 
   function storageAvailable(type) {

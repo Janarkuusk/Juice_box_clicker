@@ -1,9 +1,10 @@
-.html, body {
-    
-    display: block;
-    background-color: #D9AEFB;
-
+#top-bar, #top-bar div h3{
+  background-color: #D9AEFB;
+  color: white;
 }
-.font {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+#main{
+  background-color: greenyellow
+}
+.clearFloats{
+  clear: both;  
 }

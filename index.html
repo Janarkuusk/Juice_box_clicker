@@ -1,50 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Juice Box Clicker</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
 
-    <title>Juice Box Clicker</title>
-    <script>
-        var clicker = {
-            juice:0,
-            upgrades: {
-                juice_machine:{
-                    amount:0,
-                    cost:10,
-                    jps:1,
-                    name:"Juice machine"
-                }
-
-            }
-        };
-        function juice_clicked(juice){
-            clicker.upgrades[juice].amount++
-            update_upgrades();
-        }
-        function update_upgrades(){
-            document.querySelector("#upgrades").innerHTML="";
-            for(i in clicker.upgrades){
-                document.querySelector("#upgrades").innerHTML+= `<br> <button> onclick="juice_clicked('${i}'">${clicker.upgrades
-                [i].name}</button> you have ${clicker.upgrades[i].amount}`;
-            }
-        }
-        function updatecount(){
-           update_upgrades();
-           setInterval(() => {
-               for(i in clicker.upgrades){
-                   clicker.juice+=clicker.upgrades[i].amount*clicker.upgrades[i].jps/20
-               }
-               document.querySelector("#juice").innerHTML = "you have "+String(clicker.juice).split(".")[0]+" juice"
-           },50);
-        }
-        
-    </script>
 </head>
-<body onload="updatecount()">
-    <h1 id="juice">you have 0 juice</h1>
-    <button onclick="clicker.juice++">Get 1 juice</button>
-    <div id="upgrades"></div>
+<body>
+<div class="container-fluid" id="top-bar">
+      <div class="header clearfix">
+        <h3 class="pull-xs-left m-y-1">Juice Box Clicker</h3>
+        <button type="button" id="btn-clear" class="btn btn-danger pull-xs-right m-y-1">Clear Save</button>
+      </div>
+</div>   
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 m-t-2 p-a-2 clearfix" id="main">
+      <h3 class="text-xs-center p-y-1">Juice: <span id="juice-display">0</span></h3>
+      <button type="button" id="btn-click" class="center-block p-x-2 p-y-1 m-y-2 btn btn-lg btn-primary">Click</button>
+      <hr size="30">
+      <ul class="list-group p-y-1" id="shop">
+        <li class="list-group-item clearfix">
+          <h1 class="pull-xs-right"><span class="label label-default label-pill"><span id="owned-display">0</span> Owned</span></h1>
+          <h5 class="">Juicer<h5>
+          <span class="label label-default label-pill pull-xs-left"><span id="rate-display">1</span> Juice/sec</span>
+          </li>
+            
+          <button type="button" id="btn-buy" class="pull-xs-right btn btn-primary" disabled>Buy - 15 Juice</button>
+          <button type="button" id="btn-upgrade" class="pull-xs-right btn btn-primary" disabled>Upgrade - 15 Juice</button>
+      </ul>
+    </div> 
+  </div> 
+</div> 
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
 </body>
 </html>

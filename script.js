@@ -72,7 +72,7 @@ $(function() {
       localStorage.juice = 0;
       minersOwned = 0;
       localStorage.minersOwned = 0;  
-      minersUpgrade = 1;
+      minersUpgrade = 0;
       localStorage.minersUpgrade = 1;
       updateDisplay();
   });  

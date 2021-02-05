@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Juice Box Clicker</title>
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container-fluid" id="top-bar">
+    <div class="nes-container with-title">
+      <span class="title">Title</span>
+      <h3>Juice Box Clicker</h3>
+    </div>
+  </div>
+  </div>
+  <div class="nes-container with-title is-centered" style="width: 2110px;">
+    <div class="row">
+      <div class="clearfix" id="main">
+        <h3 class="text-xs-center p-y-1">Juice: <span id="juice-display">0</span></h3>
+        <button type="button" id="btn-main" class="center-block"><img src="click_box.png" alt=""></button>
+
+        <div id="myProgress">
+          <div id="myBar" class="nes-progress is-pattern" value="0" max="100"></div>
+        </div>
+
+        <hr size="28">
+        <ul class="list-group p-y-1" id="shop">
+          <li class="list-group-item clearfix">
+            <!-- <h1 class="pull-xs-right"><span class="label label-default label-pill"><span id="owned-display">0</span> Owned</span></h1> -->
+            <h5 class="nes-container is-rounded is-dark">Juicer<h5>
+                <p class="nes-container is-rounded" id="juicer-owned">0 clicker upgrades owned</p>
+                <p class="nes-container is-rounded" id="juicer-upgrades-owned">0 upgrades owned</p>
+                <br>
+                <h5 class="nes-container is-rounded is-dark">Mum<h5>
+                    <p class="nes-container is-rounded" id="mum-owned">0 clicker upgrades owned</p>
+                    <p class="nes-container is-rounded" id="mum-upgrades-owned">0 upgrades owned</p>
+                    <br>
+                    <h5 class="nes-container is-rounded is-dark">Juice Farm<h5>
+                        <p class="nes-container is-rounded" id="juicefarm-owned">0 clicker upgrades owned</p>
+                        <p class="nes-container is-rounded" id="juicefarm-upgrades-owned">0 upgrades owned</p>
+                        <br><br>
+
+                        <h5 class="nes-container is-rounded is-dark">Juice House<h5>
+                            <p class="nes-container is-rounded" id="juicehouse-owned">0 clicker upgrades owned</p>
+                            <p class="nes-container is-rounded" id="juicehouse-upgrades-owned">0 upgrades owned</p>
+                            <br><br>
+                            <br><br>
+
+                            <h5 class="nes-container is-rounded is-dark">Juice Machine<h5>
+                                <p class="nes-container is-rounded" id="juicemachine-owned">0 clicker upgrades owned</p>
+                                <p class="nes-container is-rounded" id="juicemachine-upgrades-owned">0 upgrades owned
+                                </p>
+                                <br><br>
+                                <span class="nes-container is-rounded is-dark"><span id="rate-display">0</span>
+                                  Juice/sec</span>
+          </li>
+          <br>
+          <button type="button" id="btn-buy-juicer" class="nes-btn btnbuy" class="pull-xs-right btn btn-primary">Buy -
+            50
+            Juicer</button>
+
+          <button type="button" id="btn-upgrade-juicer" class="nes-btn btnupgrade"
+            class="pull-xs-right btn btn-primary">Upgrade
+            - 50
+            Juicer</button>
+          <br><br>
+          <button type="button" id="btn-buy-mum" class="nes-btn btnbuy" class="pull-xs-right btn btn-primary">Buy - 500
+            Mum</button>
+          <button type="button" id="btn-upgrade-mum" class="nes-btn btnupgrade"
+            class="pull-xs-right btn btn-primary">Upgrade -
+            500
+            Mum</button>
+          <br><br>
+          <button type="button" id="btn-buy-juicefarm" class="nes-btn btnbuy" class="pull-xs-right btn btn-primary">Buy
+            - 1000
+            Juice Farm</button>
+          <button type="button" id="btn-upgrade-juicefarm" class="nes-btn btnupgrade"
+            class="pull-xs-right btn btn-primary">Upgrade -
+            1000
+            Juice Farm</button>
+          <br><br>
+          <button type="button" id="btn-buy-juicehouse" class="nes-btn btnbuy" class="pull-xs-right btn btn-primary">Buy
+            - 5000
+            Juice House</button>
+          <button type="button" id="btn-upgrade-juicehouse" class="nes-btn btnupgrade"
+            class="pull-xs-right btn btn-primary">Upgrade -
+            5000
+            Juice House</button>
+          <br><br>
+          <button type="button" id="btn-buy-juicemachine" class="nes-btn btnbuy"
+            class="pull-xs-right btn btn-primary">Buy
+            - 10000
+            Juice Machine</button>
+          <button type="button" id="btn-upgrade-juicemachine" class="nes-btn btnupgrade"
+            class="pull-xs-right btn btn-primary">Upgrade -
+            10000
+            Juice Machine</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

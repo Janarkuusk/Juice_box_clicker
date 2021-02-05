@@ -1,0 +1,39 @@
+#top-bar,
+#top-bar div h3 {
+  background-color: #d9aefb;
+  color: black;
+}
+#main {
+  background-color: whitesmoke;
+}
+.clearFloats {
+  clear: both;
+}
+
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: whitesmoke;
+  border: whitesmoke;
+}
+
+.btnupgrade {
+  background-color: #98ede7;
+}
+
+.btnbuy {
+  background-color: gold;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: grey;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #d9aefb;
+}
+

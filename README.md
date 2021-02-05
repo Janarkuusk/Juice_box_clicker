@@ -49,5 +49,5 @@
 
 **Figma**
 
-https://www.figma.com/file/MKNy4hYQwOxW0Jv7PCuIt6/Untitled?node-id=0%3A1
+https://www.figma.com/file/779Xz84ADt0U7BMJn0z4gp/Untitled?node-id=0%3A1
 
